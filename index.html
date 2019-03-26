@@ -6230,7 +6230,11 @@
                     if (displayedSpeedValue === null) {
                     	tableElements[i][SPEED].innerHTML = '-';
                     } else {
-                    	tableElements[i][SPEED].innerHTML = Math.round(displayedSpeedValue);
+						if (displayedSpeedValue < 50.0) {
+							tableElements[i][SPEED].innerHTML = Math.round(displayedSpeedValue * 10.0) / 10.0;
+						} else {
+						    tableElements[i][SPEED].innerHTML = Math.round(displayedSpeedValue);
+						}
                     }
                     
                     // Heading
