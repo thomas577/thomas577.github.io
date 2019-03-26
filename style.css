@@ -1,0 +1,312 @@
+body {
+    font-family: 'Menlo', 'Courier New', Arial;
+    font-size: 40pt;/*47pt;*/
+	background-color: #000000;
+	color: #ffffff;
+	height: 100vh;
+}
+
+div#main_table
+{
+	display: none;
+}
+
+table.gps_metrics {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.gps_metrics tbody td {
+	border-style: solid;
+	border-width: 0.03cm;
+}
+table.gps_metrics tr.gps_row_0 {
+	
+}
+table.gps_metrics td {
+	padding-right: 0.1cm;
+	padding-left: 0.1cm;
+	vertical-align: middle;
+	text-align: center;
+}
+table.gps_metrics div {
+	display: inline-block;
+	text-align: right;
+}
+table.gps_metrics thead {
+	font-size: 12pt;
+	font-variant: small-caps;
+	text-align: left;
+}
+table.gps_metrics div.metric_unit {
+	font-size: 10pt;
+}
+table.gps_metrics div.diff_unit {
+	font-size: 10pt;
+}
+table.gps_metrics div.diff {
+	background-color: #333333;
+	border-radius: 0.2cm;
+	padding-right: 0.1cm;
+	padding-left: 0.1cm;
+	margin-bottom: 0.1cm;
+	margin-top: 0.1cm;
+}
+
+/************************/
+/**** Time Elapsed ******/
+/************************/
+table.gps_metrics td.col_time_elapsed div.metric {
+	min-width: 3.25cm;
+}
+
+/************************/
+/****** Altitude ********/
+/************************/
+table.gps_metrics td.col_altitude div.metric {
+	min-width: 5.25cm;
+}
+table.gps_metrics td.col_altitude div.diff {
+	min-width: 4.7cm;
+	margin-left: 0.3cm;
+}
+
+/************************/
+/******** Speed *********/
+/************************/
+table.gps_metrics td.col_speed div.metric {
+	min-width: 3.85cm;
+}
+table.gps_metrics td.col_speed div.diff {
+	min-width: 4.3cm;
+	margin-left: 0.3cm;
+}
+
+/************************/
+/******* Heading ********/
+/************************/
+table.gps_metrics td.col_heading div.metric {
+	min-width: 1.5cm;
+	font-size: 20pt;
+}
+
+svg
+{
+	vertical-align:top
+}
+
+/************************/
+div#main_accuracy
+{
+	display: inline-block;
+}
+
+div#horizontal_accuracy {
+	border-style: solid;
+	border-width: 0.03cm;
+	width: 5.7cm;
+	padding: 0.15cm;
+	border-radius: 0.25cm;
+	display: inline-block;
+}
+div#horizontal_accuracy div.accuracy_chart
+{
+	display: inline-block;
+}
+div#horizontal_accuracy div.accuracy_title
+{
+	display: inline-block;
+	font-size: 12pt;
+	font-variant: small-caps;
+	vertical-align:top;
+	margin-left: 0.3cm;
+	/*border-bottom-style: solid;
+	border-bottom-width: 0.03cm;*/
+}
+div#horizontal_accuracy div.accuracy_metric
+{
+	text-align: center;
+}
+div#horizontal_accuracy div.accuracy_value
+{
+	font-variant: normal;
+	font-size: 30pt;
+	display: inline-block;
+	text-align: right;
+	min-width: 3.2cm;
+}
+div#horizontal_accuracy div.accuracy_unit
+{
+	font-variant: normal;
+	font-size: 10pt;
+	text-align: center;
+	display: inline-block;
+}
+#horizontal_mask_1,
+#horizontal_mask_2,
+#horizontal_mask_3, 
+#horizontal_mask_4,
+#horizontal_mask_5,
+#horizontal_mask_6
+{
+	visibility: hidden;
+}
+circle#horizontal_color
+{
+	fill: #888888;
+}
+
+/************************/
+div#vertical_accuracy {
+	border-style: solid;
+	border-width: 0.03cm;
+	width: 5.7cm;
+	padding: 0.15cm;
+	border-radius: 0.25cm;
+	display: inline-block;
+	margin-left: 0.2cm;
+}
+div#vertical_accuracy div.accuracy_chart
+{
+	display: inline-block;
+}
+div#vertical_accuracy div.accuracy_title
+{
+	display: inline-block;
+	font-size: 12pt;
+	font-variant: small-caps;
+	vertical-align:top;
+	margin-left: 0.3cm;
+}
+div#vertical_accuracy div.accuracy_metric
+{
+	text-align: center;
+}
+div#vertical_accuracy div.accuracy_value
+{
+	font-variant: normal;
+	font-size: 30pt;
+	display: inline-block;
+	text-align: right;
+	min-width: 3.2cm;
+}
+div#vertical_accuracy div.accuracy_unit
+{
+	font-variant: normal;
+	font-size: 10pt;
+	text-align: center;
+	display: inline-block;
+}
+#vertical_mask_1,
+#vertical_mask_2,
+#vertical_mask_3, 
+#vertical_mask_4,
+#vertical_mask_5,
+#vertical_mask_6
+{
+	visibility: hidden;
+}
+circle#vertical_color
+{
+	fill: #888800;
+}
+
+/*************************/
+
+div#main_buttons
+{
+	display: inline-block;
+	float: right;
+}
+g#paths_soundwaves
+{
+	visibility: hidden;
+}
+g#paths_cross
+{
+	visibility: visible;
+}
+div#main_sound:active circle#circle_sound
+{
+	fill: hsl(0,0%,40%);
+}
+
+/*************************/
+
+div#main_airports
+{
+	display: block;
+	margin-top: 0.2cm;
+	font-size: 25pt;
+}
+
+div.airport_container
+{
+	border-bottom: 0.03cm solid #797979;
+	margin-top: 0.3cm;
+	margin-bottom: 0.3cm;
+}
+div.airport_distance
+{
+	display: inline-block;
+	border-radius: 0.2cm;
+	background-color: #296525;
+	margin-top: 0.2cm;
+	margin-bottom: 0.1cm;
+	padding-left: 0.2cm;
+	padding-right: 0.2cm;
+	min-width: 3.1cm;
+	text-align: right;
+}
+div.airport_distance div.value_text
+{
+	display: inline-block;
+}
+div.airport_distance div.unit
+{
+	display: inline-block;
+	font-size: 10pt;
+}
+
+div.airport_direction
+{
+	display: inline-block;
+	padding-left: 0.2cm;
+	min-width: 1.9cm;
+	text-align: right;
+}
+div.airport_direction div.value_text
+{
+	display: inline-block;
+}
+div.airport_direction div.unit
+{
+	display: inline-block;
+	font-size: 10pt;
+}
+
+div.airport_code
+{
+	display: inline-block;
+	padding-left: 0.2cm;
+	padding-right: 0.2cm;
+}
+
+div.airport_name
+{
+	display: inline-block;
+	padding-left: 0.2cm;
+	padding-right: 0.2cm;
+	
+}
+
+div.airport_country
+{
+	display: inline-block;
+	padding: 0.05cm 0.2cm;
+	border-radius: 0.2cm;
+	background-color: #245465;
+	margin-top: 0.2cm;
+	margin-bottom: 0.1cm;
+	font: 18pt "Lucida Grande", Lucida, Verdana, sans-serif;
+	border: 0.03cm solid #18acd9;
+}
